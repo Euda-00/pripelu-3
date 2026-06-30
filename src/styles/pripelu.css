@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "tailwindcss";
+
+@layer components {
+  /* 1. CONTENEDOR DE SECCIÓN (CORREGIDO) */
+  .section-container {
+    @apply py-24 px-6 relative z-10;
+  }
+
+  /* Ajuste para pantallas grandes */
+  @media (min-width: 768px) {
+    .section-container {
+      @apply px-20;
+    }
+  }
+
+  /* 2. TÍTULOS DE SECCIÓN */
+  .section-title-wrapper {
+    @apply text-center mb-16;
+  }
+
+  .section-title {
+    @apply text-5xl font-bold italic text-gray-800;
+  }
+
+  .section-subtitle {
+    @apply text-[#f171ab] font-bold uppercase tracking-widest text-sm mb-2;
+  }
+
+  /* 3. BOTONES */
+  .btn-primary {
+    @apply bg-[#f171ab] text-white px-10 py-5 rounded-3xl font-bold text-lg shadow-xl hover:scale-105 transition-all active:scale-95 border-none cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply bg-white border border-pink-200 text-[#f171ab] px-10 py-5 rounded-3xl font-bold text-lg shadow-sm hover:bg-pink-50 transition-all flex items-center justify-center gap-3 cursor-pointer;
+  }
+
+  .btn-nav {
+    @apply bg-[#f171ab] text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-[#d85a94] transition-all border-none cursor-pointer;
+  }
+
+  /* 4. TARJETAS */
+  .card-pripelu {
+    @apply bg-white p-10 rounded-[3rem] border border-pink-50 shadow-sm hover:shadow-2xl transition-all;
+  }
+
+  /* 5. INPUTS (CORREGIDO) */
+  .input-pripelu {
+    @apply p-4 rounded-2xl border border-pink-100 outline-none focus:border-[#f171ab] bg-white/50 transition-all;
+  }
+
+  /* --- 6. NAVBAR (NUEVO: Efecto Cristal y Menú) --- */
+  .nav-cristal {
+    @apply fixed top-0 left-0 w-full z-[100] flex justify-between items-center px-8 py-4 bg-white/70 backdrop-blur-md shadow-sm border-b border-pink-100 md:px-12;
+  }
+
+  .nav-logo {
+    @apply h-10 w-auto hover:scale-105 transition-transform cursor-pointer;
+  }
+
+  .nav-links-container {
+    @apply hidden md:flex gap-10 text-gray-600 font-bold text-sm uppercase tracking-wider;
+  }
+
+  .nav-link {
+    @apply hover:text-[#f171ab] transition-colors;
+  }
+
+  .btn-avatar {
+    @apply w-10 h-10 rounded-full bg-[#f171ab] text-white font-bold flex items-center justify-center border-2 border-white shadow-lg hover:scale-105 transition-all;
+  }
+
+
+  .dropdown-item {
+    @apply flex items-center gap-3 px-5 py-4 text-sm text-gray-600 hover:bg-pink-50 transition-colors border-t border-gray-50;
+  }
+
+  /* --- 7. TARJETAS EQUIPO (Efecto Flip 3D) --- */
+  .card-flip-front {
+    @apply absolute inset-0 w-full h-full bg-white/40 backdrop-blur-md p-8 rounded-[3rem] border border-white/50 text-center shadow-xl flex flex-col justify-center items-center;
+  }
+
+  .card-flip-back {
+    @apply absolute inset-0 w-full h-full bg-[#f171ab] p-8 rounded-[3rem] text-center shadow-xl flex flex-col justify-center items-center;
+  }
+
+  .tag-equipo {
+    @apply text-[10px] uppercase font-bold px-3 py-1 bg-white/20 text-white rounded-full shadow-sm;
+  }
+
+  /* ... clases anteriores del navbar y equipo ... */
+
+  /* --- 8. COMPARADOR (Antes/Después - Mejorado) --- */
+  .comparador-seccion-wrapper {
+    /* Limitamos el ancho de la sección completa para centrar la atención */
+    @apply max-w-5xl mx-auto w-full px-4;
+  }
+
+  .comparador-container {
+    /* IMPORTANTE: aspect-[3/2] en móvil (más alto), md:aspect-[21/9] en desktop (más bajito) */
+    @apply relative w-full aspect-[3/2] md:aspect-[21/12] rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white cursor-col-resize select-none mx-auto transition-all duration-300;
+  }
+
+  .comparador-image {
+    @apply absolute inset-0 w-full h-full object-cover;
+  }
+
+  .comparador-slider-line {
+    @apply absolute top-0 bottom-0 w-1 bg-white cursor-col-resize;
+  }
+
+  .comparador-slider-handle {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-[#f171ab] font-bold border-2 border-pink-100;
+  }
+
+}

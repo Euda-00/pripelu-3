@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+
+
+@theme {
+  --color-pripelu-gold: #D4AF37;
+  --color-pripelu-pink: #FFD1DC;
+}
