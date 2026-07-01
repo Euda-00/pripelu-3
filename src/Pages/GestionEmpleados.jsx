@@ -92,7 +92,7 @@ export default function GestionEmpleados() {
         
         {/* Cabecera */}
         <div className="flex justify-between items-center">
-          <Link to="/dashboard" className="text-[#f171ab] flex items-center gap-2 hover:underline font-bold">
+          <Link to="/admin" className="text-[#f171ab] flex items-center gap-2 hover:underline font-bold mb-6 w-fit">
             <ArrowLeft size={20} /> Volver al Dashboard
           </Link>
           <h1 className="text-3xl font-serif text-[#b02a6b] italic flex items-center gap-2">
